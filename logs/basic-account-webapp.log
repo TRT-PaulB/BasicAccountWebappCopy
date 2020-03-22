@@ -45,3 +45,19 @@ Identify and stop the process that's listening on port 5000 or configure this ap
 2020-03-22 18:41:33,116 INFO org.apache.juli.logging.DirectJDKLog [http-nio-5000-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2020-03-22 18:41:33,117 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-5000-exec-1] Initializing Servlet 'dispatcherServlet'
 2020-03-22 18:41:33,126 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-5000-exec-1] Completed initialization in 7 ms
+2020-03-22 18:41:33,169 INFO com.bank.ctrl.GreetingsController [http-nio-5000-exec-1] /greeting endpoint hit
+2020-03-22 18:52:28,168 INFO org.springframework.boot.StartupInfoLogger [main] Starting BasicAccountWebappApplication on Womble1 with PID 2180 (C:\j8oxygenj2ee_workspace\BasicAccountWebapp\target\classes started by Paul in C:\j8oxygenj2ee_workspace\BasicAccountWebapp)
+2020-03-22 18:52:28,173 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-03-22 18:52:29,737 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 5000 (http)
+2020-03-22 18:52:29,751 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-5000"]
+2020-03-22 18:52:29,752 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-03-22 18:52:29,752 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-22 18:52:29,875 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-03-22 18:52:29,876 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1634 ms
+2020-03-22 18:52:30,111 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 18:52:30,342 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-5000"]
+2020-03-22 18:52:30,383 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 5000 (http) with context path ''
+2020-03-22 18:52:30,387 INFO org.springframework.boot.StartupInfoLogger [main] Started BasicAccountWebappApplication in 2.873 seconds (JVM running for 3.493)
+2020-03-22 18:52:57,052 INFO org.apache.juli.logging.DirectJDKLog [http-nio-5000-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 18:52:57,052 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-5000-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-03-22 18:52:57,060 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-5000-exec-1] Completed initialization in 7 ms
