@@ -202,3 +202,18 @@ com.bank.ex.NotImplementedException: Path not yet implemented for small/business
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Unknown Source)
+2020-03-22 19:18:47,054 INFO com.bank.ctrl.GreetingsController [http-nio-5000-exec-4] /greeting endpoint hit
+2020-03-22 19:30:47,763 INFO org.springframework.boot.StartupInfoLogger [main] Starting AccountServiceTest on Womble1 with PID 5724 (started by Paul in C:\j8oxygenj2ee_workspace\BasicAccountWebapp)
+2020-03-22 19:30:47,766 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-03-22 19:30:50,075 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 19:30:50,631 INFO org.springframework.boot.StartupInfoLogger [main] Started AccountServiceTest in 3.422 seconds (JVM running for 5.051)
+2020-03-22 19:30:51,288 INFO com.bank.serv.AccountService [main] business user with account type 'small'
+2020-03-22 19:30:51,296 INFO com.bank.serv.AccountService [main] business user with account type 'small'
+2020-03-22 19:30:51,337 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 19:32:25,186 INFO org.springframework.boot.StartupInfoLogger [main] Starting AccountServiceTest on Womble1 with PID 13940 (started by Paul in C:\j8oxygenj2ee_workspace\BasicAccountWebapp)
+2020-03-22 19:32:25,188 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-03-22 19:32:27,593 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 19:32:28,295 INFO org.springframework.boot.StartupInfoLogger [main] Started AccountServiceTest in 3.799 seconds (JVM running for 5.674)
+2020-03-22 19:32:29,341 INFO com.bank.serv.AccountService [main] business user with account type 'small'
+2020-03-22 19:32:29,350 INFO com.bank.serv.AccountService [main] business user with account type 'small'
+2020-03-22 19:32:29,394 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
