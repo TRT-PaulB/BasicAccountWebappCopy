@@ -2,12 +2,17 @@
 
 *******************************************
 NOTES:
-No account modelling included in the implementation as this was not necessary
 
+- No account modelling included in the implementation as this was not necessary
+- Removed the superfluous word 'and' from scenarios 2 and 3
+- Test provided:
+  - service
+  - controller 
+  
 *******************************************
 ENDPOINT:  
-http://localhost:5000/greeting/{account}/{id}/{type}   
 
+http://localhost:5000/greeting/{account}/{id}/{type}   
 
 EXAMPLES:
 1) Get a greeting for a small personal business account with id 123       
