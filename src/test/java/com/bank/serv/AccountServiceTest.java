@@ -99,4 +99,80 @@ public class AccountServiceTest {
 	}
 	
 	
+	@Test
+	public void testValidAccountClassification() {
+		service.validateAccountClassification(AccountService.PERSONAL);
+		service.validateAccountClassification(AccountService.BUSINESS);
+	}
+
+	
+	@Test
+	public void testInvalidAccountClassification() {
+		 Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			 service.validateAccountClassification(AccountService.PERSONAL + "Q");
+		 });
+
+		 Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			 service.validateAccountClassification(AccountService.PERSONAL.toUpperCase());
+		 });
+
+		 Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			 service.validateAccountClassification(AccountService.BUSINESS.toUpperCase());
+		 });
+		 
+		 Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			 service.validateAccountClassification("private");
+		 });
+	}
+
+	
+	@Test
+	public void testValidAccountType() {
+		service.validate(AccountService.BIG);
+		service.validate(AccountService.SMALL);
+	}
+	
+	
+	@Test
+	public void testInvalidAccountType() {
+		 Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			 service.validateAccountClassification(AccountService.BIG + "Q");
+		 });
+
+		 Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			 service.validateAccountClassification(AccountService.BIG.toUpperCase());
+		 });
+
+		 Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			 service.validateAccountClassification(AccountService.SMALL.toUpperCase());
+		 });
+		 
+		 Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			 service.validateAccountClassification("medium");
+		 });
+	}
+	
+	
+	@Test
+	public void testValidIdAndClassification() {
+		service.validate(1, AccountService.PERSONAL);
+		service.validate(100000, AccountService.PERSONAL);
+		service.validate(1, AccountService.BUSINESS);
+	}
+	
+	
+	@Test
+	public void testInvalidIdAndClassification() {
+		Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			service.validate(0, AccountService.PERSONAL);
+		});
+		
+		Assertions.assertThrows(InvalidAccountDetailsException.class, () -> {
+			service.validate(-1, AccountService.PERSONAL);
+		});
+
+		service.validate(-1, AccountService.BUSINESS);
+	}
+	
+	
 }

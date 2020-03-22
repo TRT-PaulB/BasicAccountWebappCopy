@@ -24,6 +24,7 @@ private Logger logger = LoggerFactory.getLogger(AccountService.class);
 		
 	
 	public String getGreeting(int id, String classification, String type) {
+		validate(id, classification, type);
 		classification = classification.toLowerCase().trim();
 		
 		if (classification.equals(BUSINESS)) {
@@ -48,11 +49,38 @@ private Logger logger = LoggerFactory.getLogger(AccountService.class);
 	
 	
 	protected void validate(int id, String classification, String type) {
-		if (id <= 0) {
-			throw new InvalidAccountDetailsException("invalid details");
+		if (classification == null || type == null) {
+			throw new InvalidAccountDetailsException("Account info is missing");
 		}
 		
+		validate(id, classification);
+		validateAccountClassification(classification.toLowerCase().trim());
+		validate(type.toLowerCase().trim());
 	}
-		
+	
+	
+	protected void validate(int id, String classification) {
+		if (classification.equals(PERSONAL) && id <= 0) {
+			throw new InvalidAccountDetailsException("Invalid account id");
+		}
+	}
+	
+	
+	protected void validate(String type) {
+		boolean isValid = 
+				VALID_TYPES.stream().filter(s->s.equals(type)).findFirst().isPresent(); 
+		if (!isValid) {
+			throw new InvalidAccountDetailsException("Invalid account type");
+		}
+	}
+	
+	protected void validateAccountClassification(String classification) {
+		boolean isValid =  
+				VALID_CLASSIFICATIONS.stream().filter(s->s.equals(classification)).findFirst().isPresent();
+		if (!isValid) {
+			throw new InvalidAccountDetailsException("Invalid account classification");
+		}
+	}
+
 
 }
