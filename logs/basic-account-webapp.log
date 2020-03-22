@@ -115,3 +115,90 @@ com.bank.ex.NotImplementedException: Path not yet implemented for bad path
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Unknown Source)
+2020-03-22 19:12:37,001 INFO org.springframework.boot.StartupInfoLogger [main] Starting AccountServiceTest on Womble1 with PID 14352 (started by Paul in C:\j8oxygenj2ee_workspace\BasicAccountWebapp)
+2020-03-22 19:12:37,004 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-03-22 19:12:39,060 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 19:12:39,589 INFO org.springframework.boot.StartupInfoLogger [main] Started AccountServiceTest in 3.156 seconds (JVM running for 4.587)
+2020-03-22 19:12:40,358 INFO com.bank.serv.AccountService [main] business user with account type 'small'
+2020-03-22 19:12:40,379 INFO com.bank.serv.AccountService [main] business user with account type 'small'
+2020-03-22 19:12:40,484 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 19:15:16,408 INFO org.springframework.boot.StartupInfoLogger [main] Starting AccountServiceTest on Womble1 with PID 3152 (started by Paul in C:\j8oxygenj2ee_workspace\BasicAccountWebapp)
+2020-03-22 19:15:16,411 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-03-22 19:15:18,579 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 19:15:19,140 INFO org.springframework.boot.StartupInfoLogger [main] Started AccountServiceTest in 3.312 seconds (JVM running for 4.774)
+2020-03-22 19:15:19,739 INFO com.bank.serv.AccountService [main] business user with account type 'small'
+2020-03-22 19:15:19,751 INFO com.bank.serv.AccountService [main] business user with account type 'small'
+2020-03-22 19:15:19,817 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-22 19:17:40,967 INFO org.springframework.boot.StartupInfoLogger [main] Starting BasicAccountWebappApplication on Womble1 with PID 14680 (C:\j8oxygenj2ee_workspace\BasicAccountWebapp\target\classes started by Paul in C:\j8oxygenj2ee_workspace\BasicAccountWebapp)
+2020-03-22 19:17:40,971 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-03-22 19:17:42,765 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 5000 (http)
+2020-03-22 19:17:42,778 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-5000"]
+2020-03-22 19:17:42,779 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2020-03-22 19:17:42,779 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-03-22 19:17:42,898 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-03-22 19:17:42,899 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1840 ms
+2020-03-22 19:17:43,151 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-22 19:17:43,328 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-5000"]
+2020-03-22 19:17:43,369 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 5000 (http) with context path ''
+2020-03-22 19:17:43,373 INFO org.springframework.boot.StartupInfoLogger [main] Started BasicAccountWebappApplication in 3.023 seconds (JVM running for 3.508)
+2020-03-22 19:17:52,055 INFO org.apache.juli.logging.DirectJDKLog [http-nio-5000-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-03-22 19:17:52,056 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-5000-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-03-22 19:17:52,067 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-5000-exec-1] Completed initialization in 10 ms
+2020-03-22 19:17:52,134 INFO com.bank.ctrl.GreetingsController [http-nio-5000-exec-1] /greeting endpoint hit
+2020-03-22 19:18:31,517 INFO com.bank.ctrl.GreetingsController [http-nio-5000-exec-2] /greeting endpoint hit
+2020-03-22 19:18:31,518 INFO com.bank.serv.AccountService [http-nio-5000-exec-2] business user with account type 'small'
+2020-03-22 19:18:31,527 INFO com.bank.ctrl.WebAdvice [http-nio-5000-exec-2] Path not yet implemented for small/business
+com.bank.ex.NotImplementedException: Path not yet implemented for small/business
+	at com.bank.serv.AccountService.getGreetingForBusinessAccount(AccountService.java:41)
+	at com.bank.serv.AccountService.getGreeting(AccountService.java:30)
+	at com.bank.ctrl.GreetingsController.getGreeting(GreetingsController.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
