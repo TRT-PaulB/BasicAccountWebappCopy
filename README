@@ -25,10 +25,17 @@ EXAMPLES:
    http://localhost:5000/greeting/business/1/big 
 
 *******************************************
-********* DIRECTIONS TO RUN APP: *********
+********* DIRECTIONS TO RUN APP: **********
 *******************************************
+PREREQUITES:
 
-- Direct from application: 
+- unix based operating system
+- java 8+
+- docker 19+ installed
+
+-------------------------------------------
+- Direct from MAVEN: 
+
   - download the app from github:
     https://github.com/MiniProjs123/BasicAccountWebapp
     
@@ -43,10 +50,17 @@ EXAMPLES:
       --> http://localhost:5000/greeting/business/1/small
       --> http://localhost:5000/greeting/business/1/big
   
-     - check that docker is installed
+    - press 'CTRL+C' to stop the application 
+ 
+ ------------------------------------------- 
+  
+ - Run in DOCKER container:
+ 
+     - check that docker is installed and see if any containers are running currently
        docker --version
-       
-     -  Do this???
+       docker ps
+        
+     -  Prepare the dependency variable used in the Dockerfile:
         mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
         
 	 - Build the docker image for the app
@@ -57,36 +71,22 @@ EXAMPLES:
 	   
 	 - run the app in an instance of the docker container defined in the image
 	   docker run -p 5000:5000 -t accountapp
-	
-	 - verify the container is up and running, and note the container id for accountapp
-	   docker ps
-	
-	 - stop the app:
+
+	 - stop the app command line (optional):
 	   press 'CTRL+C' to stop the command line running
-	   docker stop [container id] 
+	
+	 - verify the container is up and running, and note the container id for 'accountapp'
+	   docker ps
+
+     - test the application from the browser:	   
+      --> http://localhost:5000/greeting/personal/123/small
+      --> http://localhost:5000/greeting/business/1/small
+      --> http://localhost:5000/greeting/business/1/big	   
+	
+	 - stop the docker container instance 
+	   docker stop [container_id] 
 	   
 	 - verify that the container has now been stopped
        docker ps -a
 	   
- *******************************************   
-
-	
-	/*
-	Dockerfile
-	
-	FROM openjdk:8-jdk-alpine
-	RUN addgroup -S spring && adduser -S spring -G spring
-	USER spring:spring
-	ARG DEPENDENCY=target/dependency
-	COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
-	COPY ${DEPENDENCY}/META-INF /app/META-INF
-	COPY ${DEPENDENCY}/BOOT-INF/classes /app
-	ENTRYPOINT ["java","-cp","app:app/lib/*","com.bank.BasicAccountWebappApplication"]
-	*/
-	
-	
-	
-	
-
-	
-	
+*******************************************   
