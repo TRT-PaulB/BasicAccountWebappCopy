@@ -11,7 +11,6 @@
 	<groupId>com.bank</groupId>
 	<artifactId>BasicAccountWebapp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 	<name>BasicAccountWebapp</name>
 	<description>Spring Boot account demo app</description>
 
