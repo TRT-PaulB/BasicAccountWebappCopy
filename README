@@ -102,11 +102,8 @@ ONLINE RESOURCES:
     https://github.com/MiniProjs123/BasicAccountWebapp
     
 --> Local mac:
-    ~/Documents/AccountWorkspace/BasicAccountWebapp [originally]
+    ~/Documents/AccountWorkspace/BasicAccountWebapp [originally MiniProjs123 (4748)]
     ~/Documents/Oct2020Workspace/BasicAccountWebapp [TRT] BasicAccountWebappCopy (now with readme extension)
-
-
-
 
 --> Make sure docker daemon is running locally - ie. Applications/Docker
     Then login to docker client.
