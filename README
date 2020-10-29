@@ -90,3 +90,80 @@ PREREQUITES:
        docker ps -a
 	   
 *******************************************   
+ONLINE RESOURCES:
+
+--> Spring boot 2 docker example (especially for dockerfile):
+	https://spring.io/guides/gs/spring-boot-docker/
+
+--> Dockerhub
+    hub.docker.com
+    
+--> Github
+    https://github.com/MiniProjs123/BasicAccountWebapp
+    
+--> Local mac:
+    ~/Documents/AccountWorkspace/BasicAccountWebapp 
+    ~/Documents/Oct2020Workspace/BasicAccountWebapp [paul47]
+
+[TRT] BasicAccountWebappCopy (without readme extension)
+
+
+--> Make sure docker daemon is running locally - ie. Applications/Docker
+    Then login to docker client.
+    
+ *******************************************   
+ PUSH AND PULL TAGGED IMAGES USING DOCKERHUB:
+ 
+ The important point to remember is that the image is identified
+ and retrieved from the repository by tag, and should therefore
+ contain parts to identify both name and version.
+ 
+ The dockerhub repository must also be public.
+ 
+ ==> login to remote dockerhub registry, start local docker daemons app, 
+     and login to local docker client via command line.
+ 
+ ==> Get existing local images:  docker image ls
+ 
+ ==> EITHER tag an existing image (by id) and bind to your dockerhub repository:
+            docker tag bb38976d03cf yourhubusername/verse_gapminder:firsttry
+            docker tag 16b8d05ea9d2 dockerdostuff/dockerrepo:BasicAccountWebappv1.3 
+                
+ ==> OR     build a new image and tag it at once - 
+            (obviously from the local location containing the docker file):
+            ==> docker build -t dockerdostuff/dockerrepo:BasicAccountWebappv1.3 .
+ 
+ ==> Then push your docker image to your repository:
+            docker push dockerdostuff/dockerrepo:BasicAccountWebappv1.3
+ 
+ ==> remove the image locally to test pull it in from remote:              
+     docker image remove [image_id]
+               
+ ==> pull the image down (arguably could miss out this step):
+     docker pull dockerdostuff/dockerrepo:BasicAccountWebappv1.3              
+               
+ ==> run the remote sourced image locally:
+     docker run -p 5000:5000 -t dockerdostuff/dockerrepo:BasicAccountWebappv1.3             
+               
+ *******************************************   
+ INSTRUCTIONS FOR USE FOR A USER WITH A DOCKERHUB ACCOUNT:
+ 
+ --> logon to your docker hub account
+ --> pull the tagged image and run it:
+                  
+     docker pull dockerdostuff/BasicAccountWebappv1.3              
+     docker run -p 5000:5000 -t dockerdostuff/dockerrepo:BasicAccountWebappv1.3              
+ 
+ *******************************************   
+
+
+
+
+
+
+
+
+
+
+
+
